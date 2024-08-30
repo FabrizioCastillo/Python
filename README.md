@@ -10,7 +10,7 @@ Para añadir el repositorio como origen remoto (GitHub) para git:
 git remote add origin https://github.com/FabrizioCastillo/Python.git
 ```
 
-> ![TIP]
+> [!TIP]
 > Si se usa `git clone` no hace falta porque el remoto ya viene añadido
 
 Para traer (pull) los cambios del repositorio remoto al local:
@@ -26,7 +26,7 @@ Para confirmar (commit) los cambios hechos que estén añadidos al área de prep
 ```shell
 git commit -m "mensaje"
 ```
->![TIP]
+>[!TIP]
 >El mensaje debe estar vacío
 
 Para enviar (push) los cambios confirmados al repositorio remoto:
