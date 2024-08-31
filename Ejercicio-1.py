@@ -4,6 +4,8 @@ LONG_MIN = -9223372036854775808
 LONG_MAX = 9223372036854775807
 #Actualizacion
 #Rojassss
+Valor = 100
+print("hoal")
 def short(num):
     if SHORT_MIN <= num <= SHORT_MAX:
         print(f"Valor convertido a short: {int(num)}")
