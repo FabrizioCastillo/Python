@@ -1,2 +1,0 @@
-print("Fabri gey")
-#fbeuhbvdifjgeirbg
