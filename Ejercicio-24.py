@@ -1,13 +1,8 @@
-def imprimir_caracteres(Palabra, indice=0):
-  #Lent: Contador de caracteres que hay
-    if indice == len(Palabra):
+def tex(cadena, indice=0):
+    if indice == len(cadena):
         return
-    # Imprime
-    print(Palabra[indice])
-    # Llamada recursiva
-    imprimir_caracteres(Palabra, indice + 1)
-
-
-#Principal 
-Palabra = input("Ingrese una frase: ")
-imprimir_caracteres(Palabra)
+    else:
+        print(cadena[indice])
+    tex(cadena, indice + 1)
+cadena= input("ingrese una cadena: ")
+tex(cadena)
