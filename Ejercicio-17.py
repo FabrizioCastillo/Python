@@ -22,21 +22,18 @@ def diaExisteEnMes(d, m, a):
     d = int(d)
     m = int(m)
     a = int(a)
-    dias_por_mes = {
-        1: 31,  # Enero
-        2: 29 if (a % 4 == 0 and (a % 100 != 0 or a % 400 == 0)) else 28,  # Febrero
-        3: 31,  # Marzo
-        4: 30,  # Abril
-        5: 31,  # Mayo
-        6: 30,  # Junio
-        7: 31,  # Julio
-        8: 31,  # Agosto
-        9: 30,  # Septiembre
-        10: 31, # Octubre
-        11: 30, # Noviembre
-        12: 31  # Diciembre
-    }
-    dias = dias_por_mes[m]
+    match m:
+        case 1 | 3 | 5 | 7 | 8 | 10 | 12:
+            dias = 31
+        case 4 | 6 | 9 | 11:
+            dias = 30
+        case 2:
+            if (a % 4 == 0 and (a % 100 != 0 or a % 400 == 0)):
+                dias = 29
+            else:
+                dias = 28
+        case _:
+            dias = 2
     return 1 <= d <= dias
     
 class FuncionesPrograma:
@@ -48,9 +45,6 @@ class FuncionesPrograma:
             dd: str = f[0:2]
             mm: str = f[3:5]
             aaaa: str = f[6:10]
-            
-            print(int(mm))
-            print(mm)
             
             if 1 <= int(mm) <= 12:
                 m = meses[mm]
