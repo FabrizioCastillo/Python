@@ -7,6 +7,7 @@ Quince de Octubre de mil novecientos.
 Cree una clase Principal que contenga un método main y haga uso de la función
 getFechaString.
 """
+
 from num2words import num2words
 
 meses = {
@@ -52,9 +53,18 @@ def diaExisteEnMes(d, m, a) -> bool:
     return 1 <= d <= dias
 
 
+class Principal:
+    
+    def __init__(self, fecha) -> None:
+        self.f = fecha
+    
+    # @classmethod
+    def main(self):
+        fechaStr = FuncionesPrograma.getFechaString(self.f)
+        print(fechaStr)
+
+
 class FuncionesPrograma:
-    def __init__(self) -> None:
-        pass
     @staticmethod
     def getFechaString(f) -> str:
         """Función que expresa una fecha dada en formato DD/MM/AAAA como una fecha en palabras
@@ -88,9 +98,6 @@ class FuncionesPrograma:
             return f"{f} no está en formato DD/MM/AAAA."
 
 
-funciones = FuncionesPrograma()
-
 fecha = str(input("Ingrese una fecha en formato DD/MM/AAAA: "))
-fechaStr = funciones.getFechaString(fecha)
-
-print(fechaStr)
+pri = Principal(fecha)
+pri.main()
