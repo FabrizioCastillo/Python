@@ -1,7 +1,12 @@
-# Cree una clase FuncionesPrograma y codifique una función estática getFechaString
-# que reciba como parámetro una fecha y retorne la fecha como una cadena literal.
-# Ejemplo recibo 15/10/1900, la salida debe ser
-# Quince de Octubre de mil novecientos.
+"""
+Cree una clase FuncionesPrograma y codifique una función estática getFechaString
+que reciba como parámetro una fecha y retorne la fecha como una cadena literal.
+Ejemplo recibo 15/10/1900, la salida debe ser
+Quince de Octubre de mil novecientos.
+
+Cree una clase Principal que contenga un método main y haga uso de la función
+getFechaString.
+"""
 from num2words import num2words
 
 meses = {
@@ -48,6 +53,8 @@ def diaExisteEnMes(d, m, a) -> bool:
 
 
 class FuncionesPrograma:
+    def __init__(self) -> None:
+        pass
     @staticmethod
     def getFechaString(f) -> str:
         """Función que expresa una fecha dada en formato DD/MM/AAAA como una fecha en palabras
