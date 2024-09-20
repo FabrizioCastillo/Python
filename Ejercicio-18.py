@@ -59,7 +59,13 @@ class FuncionesPrograma:
                 mes = f"0{mes}"
         else:
             return f"No existe el mes {mes}"
-        
+        match anio:
+            case x if anio <= x < 10:
+                anio = f"000{anio}"
+            case x if anio <= x < 100:
+                anio = f"00{anio}"
+            case x if anio <= x < 1000:
+                anio = f"0{anio}"
         return f"{dia}/{mes}/{anio}"
 
     @staticmethod
