@@ -1,9 +1,8 @@
 # Ejercicio 2
 
-> Si se asigna un valor a una variable fuera de rango (mayor de lo establecido) ¿Qué
-> ocurre? ¿Existe alguna forma de resolverlo? Ejemplifique
+> Si se asigna un valor a una variable fuera de rango (mayor de lo establecido) ¿Qué ocurre? ¿Existe alguna forma de resolverlo? Ejemplifique
 
-Asignar una variable fuera de rango se refiere normalmente a errores de índice (IndexError, KeyError o StopIteration)
+Asignar una variable fuera de rango se refiere normalmente a errores de índice como IndexError, KeyError o StopIteration
 
 Ejemplo de IndexError:
 
