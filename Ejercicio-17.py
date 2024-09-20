@@ -54,11 +54,10 @@ def diaExisteEnMes(d, m, a) -> bool:
 
 
 class Principal:
-    
+
     def __init__(self, fecha) -> None:
         self.f = fecha
-    
-    # @classmethod
+
     def main(self):
         fechaStr = FuncionesPrograma.getFechaString(self.f)
         print(fechaStr)
