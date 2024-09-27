@@ -39,9 +39,12 @@ def plata(bille):
         bille %= 0.05
 
         # Imprimir resultados
-    print(f"Billetes de 200: {bi200}\n Billetes de 100: {bi100}\n Billetes de 50: {bi50}\n Billetes de 20: {bi20}\n "
-          f"Billetes de 10: {bi10}\n Billetes de 5: {bi5}\n Billetes de 2: {bi2}\n Billetes de 1: {bi1}\n "
-          f"Monedas de 0.50: {mon05}\n Monedas de 0.25: {mon25}\n Monedas de 0.10: {mon10}\n Monedas de 0.05: {mon005}")
+    print(
+        f"Billetes de 200: {bi200}\n Billetes de 100: {bi100}\n Billetes de 50: {bi50}\n Billetes de 20: {bi20}\n "
+        f"Billetes de 10: {bi10}\n Billetes de 5: {bi5}\n Billetes de 2: {bi2}\n Billetes de 1: {bi1}\n "
+        f"Monedas de 0.50: {mon05}\n Monedas de 0.25: {mon25}\n Monedas de 0.10: {mon10}\n Monedas de 0.05: {mon005}"
+    )
 
-canti= float(input("Cantidad de plata: "))
+
+canti = float(input("Cantidad de plata: "))
 plata(canti)

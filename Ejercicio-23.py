@@ -4,6 +4,7 @@ def rever(cadena):
     else:
         return cadena[-1] + rever(cadena[:-1])
 
+
 cadena = input("Ingrese una frase: ")
 tex = rever(cadena)
 print(f"El texto al inverso es: {tex}")

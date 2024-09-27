@@ -4,5 +4,7 @@ def tex(cadena, indice=0):
     else:
         print(cadena[indice])
     tex(cadena, indice + 1)
-cadena= input("ingrese una cadena: ")
+
+
+cadena = input("ingrese una cadena: ")
 tex(cadena)

@@ -34,6 +34,7 @@ class Fraccion:
         denominador = f1.denominador * f2.numerador
         return Fraccion(numerador, denominador)
 
+
 class OperacionesFraccion:
     @staticmethod
     def main():
@@ -57,6 +58,7 @@ class OperacionesFraccion:
         print(f"Resta: {resta}")
         print(f"Multiplicación: {multiplicacion}")
         print(f"División: {division}")
+
 
 # Ejecutar el método main de la clase OperacionesFraccion
 if __name__ == "__main__":
