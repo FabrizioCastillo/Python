@@ -1,65 +1,51 @@
+from dataclasses import dataclass
+
+
 class Fraccion:
-    def __init__(self, numerador, denominador):
-        if denominador == 0:
-            raise ValueError("El denominador no puede ser cero")
-        self.numerador = numerador
-        self.denominador = denominador
+    def __init__(self, n1, n2):
+        self.num = n1
+        self.den = n2
 
     def __str__(self):
-        return f"{self.numerador}/{self.denominador}"
+        return f"{self.num}/{self.den}"
 
     @staticmethod
-    def sumarFracciones(f1, f2):
-        numerador = f1.numerador * f2.denominador + f2.numerador * f1.denominador
-        denominador = f1.denominador * f2.denominador
+    def sumarFraccion(f1, f2):
+        numerador = f1.num * f2.den + f2.num * f1.den
+        denominador = f1.den * f2.den
         return Fraccion(numerador, denominador)
 
-    @staticmethod
-    def restarFracciones(f1, f2):
-        numerador = f1.numerador * f2.denominador - f2.numerador * f1.denominador
-        denominador = f1.denominador * f2.denominador
+    def restarFraccion(f1, f2):
+        numerador = f1.num * f2.den - f2.num * f1.den
+        denominador = f1.den * f2.den
         return Fraccion(numerador, denominador)
 
-    @staticmethod
-    def multiplicarFracciones(f1, f2):
-        numerador = f1.numerador * f2.numerador
-        denominador = f1.denominador * f2.denominador
+    def multiplicarFraccion(f1, f2):
+        numerador = f1.num * f2.num
+        denominador = f1.den * f2.den
         return Fraccion(numerador, denominador)
 
-    @staticmethod
-    def dividirFracciones(f1, f2):
-        if f2.numerador == 0:
-            raise ValueError("No se puede dividir por una fracción con numerador cero")
-        numerador = f1.numerador * f2.denominador
-        denominador = f1.denominador * f2.numerador
+    def dividirFraccion(f1, f2):
+        numerador = f1.num * f2.den
+        denominador = f1.den * f2.num
         return Fraccion(numerador, denominador)
 
 
-class OperacionesFraccion:
-    @staticmethod
+class Principal:
     def main():
-        # Solicitar al usuario el ingreso de 4 valores numéricos enteros
-        numerador1 = int(input("Ingrese el numerador de la primera fracción: "))
-        denominador1 = int(input("Ingrese el denominador de la primera fracción: "))
-        numerador2 = int(input("Ingrese el numerador de la segunda fracción: "))
-        denominador2 = int(input("Ingrese el denominador de la segunda fracción: "))
-
-        # Crear dos objetos Fracción
-        fraccion1 = Fraccion(numerador1, denominador1)
-        fraccion2 = Fraccion(numerador2, denominador2)
-
-        # Ejecutar los métodos y mostrar los resultados
-        suma = Fraccion.sumarFracciones(fraccion1, fraccion2)
-        resta = Fraccion.restarFracciones(fraccion1, fraccion2)
-        multiplicacion = Fraccion.multiplicarFracciones(fraccion1, fraccion2)
-        division = Fraccion.dividirFracciones(fraccion1, fraccion2)
-
-        print(f"Suma: {suma}")
-        print(f"Resta: {resta}")
-        print(f"Multiplicación: {multiplicacion}")
-        print(f"División: {division}")
+        n1 = int(input("Ingrese el numerador de la primer fraccion: "))
+        d1 = int(input("Ingrese el denominador de la primer fraccion: "))
+        n2 = int(input("Ingrese el numerador de la segunda fraccion: "))
+        d2 = int(input("Ingrese el denominador de la segunda fraccion: "))
+        f1 = Fraccion(n1, d1)
+        f2 = Fraccion(n2, d2)
+        suma = Fraccion.sumarFraccion(f1, f2)
+        resta = Fraccion.restarFraccion(f1, f2)
+        mult = Fraccion.multiplicarFraccion(f1, f2)
+        div = Fraccion.dividirFraccion(f1, f2)
+        print(
+            f"La suma de las fracciones es: {suma}\nLa resta de las fracciones es: {resta}\nLa multiplicacion entre las fracciones es: {mult}\nLa division entre las fracciones es: {div}"
+        )
 
 
-# Ejecutar el método main de la clase OperacionesFraccion
-if __name__ == "__main__":
-    OperacionesFraccion.main()
+Principal.main()

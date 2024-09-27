@@ -1,27 +1,55 @@
-# Cree una clase OperacionMatematica con dos atributos valor1 y valor2 y un atributo de nombre operación.
 class OperacionMatematica:
-    def __init__(self, num1, num2):
-        self.num1 = num1
-        self.num2 = num2
+    def sumarNumeros(v1, v2):
+        tot = v1 + v2
+        print(f"La suma entre ambos valores es: {tot}")
 
-    def suma(self):
-        return self.num1 + self.num2
+    def restarNumeros(v1, v2):
+        tot = v1 - v2
+        print(f"La resta entre ambos valores es: {tot}")
 
-    def resta(self):
-        return self.num1 - self.num2
+    def multiplicarNumeros(v1, v2):
+        tot = v1 * v2
+        print(f"La multiplicacion entre ambos valores es: {tot}")
 
-    def multiplicacion(self):
-        return self.num1 * self.num2
+    def dividirNumeros(v1, v2):
+        tot = v1 / v2
+        print(f"La division entre ambos valores es: {tot}")
 
-    def division(self):
-        return self.num1 / self.num2
+    def aplicarOperacion(opc, v1, v2):
+        match opc:
+            case "+":
+                OperacionMatematica.sumarNumeros(v1, v2)
+            case "-":
+                OperacionMatematica.restarNumeros(v1, v2)
+            case "*":
+                OperacionMatematica.multiplicarNumeros(v1, v2)
+            case "/":
+                OperacionMatematica.dividirNumeros(v1, v2)
+            case "0":
+                exit()
 
 
-num1 = int(input("Ingrese el primer numero: "))
-num2 = int(input("Ingrese el segundo numero: "))
+class Principal:
+    def main():
+        opcion = 1
+        valor1 = int(input("Ingrese el primer valor: "))
+        valor2 = int(input("Ingrese el segundo valor: "))
+        while opcion != 0:
+            opcion = input(
+                """"
+                                   ===============================================================================
+                                   =================================== MENU ======================================
+                                   =                                                                             =
+                                   =                       + - Sumar                                             =
+                                   =                       - - Restar                                            =
+                                   =                       / - Dividir                                           =
+                                   =                       * - Multiplicar                                       =
+                                   =                       0 - Salir                                             =
+                                   =                                                                             =
+                                   ===============================================================================
+                                   """
+            )
+            OperacionMatematica.aplicarOperacion(opcion, valor1, valor2)
 
-cuentas = OperacionMatematica(num1, num2)
-print("Suma: ", OperacionMatematica.suma(cuentas))
-print("Resta: ", OperacionMatematica.resta(cuentas))
-print("Multiplicacion", OperacionMatematica.multiplicacion(cuentas))
-print("Division", OperacionMatematica.division(cuentas))
+
+Principal.main()

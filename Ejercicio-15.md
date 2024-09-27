@@ -1,3 +1,4 @@
+
 # Ejercicio 15
 
 Al ejecutar el siguente código:
@@ -7,6 +8,19 @@ x = None
 print(x)
 ```
 
-La salida es simplemente `None` debido a que se está solicitando que se muestre el valor de x, que es `None`.
+Salida: None
 
-`None` es un objeto especial que representa la ausencia de un valor o un valor nulo. Es un tipo de dato en sí mismo y es único en su categoría.
+--Explicacion--
+
+None significa la ausencia de un valor o un valor nulo.Se puede utilizar 
+(cuando no tenemos un valor establecido para una variable) como valor predeterminado
+o cuando una funcion no devuelve ningun valor.
+
+--Ejemplo--
+
+def_funcion_sin_retorno():
+
+ print("Esta funcion no devuelve ningun valor")
+
+resultado=funcion_sin_retorno()
+print(resultado)  # Salida:None
