@@ -1,3 +1,13 @@
+
+# Ejercicio 15
+
+Al ejecutar el siguente código:
+
+```py
+x = None 
+print(x)
+```
+
 *Salida: None
 
 --Explicacion--
