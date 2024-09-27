@@ -1,3 +1,4 @@
+
 num = int(input("Ingrese un numero de tres digitos: "))
 
 # Suma de sus digitos con operaciones matematicas
